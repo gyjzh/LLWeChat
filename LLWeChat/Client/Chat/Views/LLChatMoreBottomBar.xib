@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLChatViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LLChatMoreBottomBar">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNT-3V-zB1">
+                    <frame key="frameInset" minX="33" minY="6" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="Session_Multi_Forward"/>
+                    <state key="highlighted" image="Session_Multi_Forward_HL"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuG-Ln-hVw">
+                    <frame key="frameInset" minX="183" minY="8" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="Session_Multi_Delete"/>
+                    <state key="highlighted" image="Session_Multi_Delete_HL"/>
+                    <connections>
+                        <action selector="deleteAction:" destination="-1" eventType="touchUpInside" id="dQH-6Q-L6y"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-SN-hMI">
+                    <frame key="frameInset" minX="268" minY="8" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="Session_Multi_More"/>
+                    <state key="highlighted" image="Session_Multi_More_HL"/>
+                    <connections>
+                        <action selector="shareAction:" destination="-1" eventType="touchUpInside" id="aK8-Lk-gqL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifW-bs-t8l">
+                    <frame key="frameInset" minX="113" minY="8" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="Session_Multi_Fav"/>
+                    <state key="highlighted" image="Session_Multi_Fav_HL"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deleteButton" destination="EuG-Ln-hVw" id="yr8-PB-ThG"/>
+                <outlet property="favoriteButton" destination="ifW-bs-t8l" id="byX-2Q-CRQ"/>
+                <outlet property="forwardButton" destination="pNT-3V-zB1" id="qfC-of-uur"/>
+                <outlet property="moreButton" destination="IKr-SN-hMI" id="lIB-lp-wfK"/>
+            </connections>
+            <point key="canvasLocation" x="-17" y="-412"/>
+        </view>
+        <view contentMode="scaleToFill" id="tsX-Eh-vVY" customClass="LLChatSharePanel">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDk-ld-Dj6">
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XE4-aN-qvo">
+                            <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hfp-Nm-Bnf">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="tsX-Eh-vVY" id="QKa-Sp-9zi"/>
+                                <outlet property="delegate" destination="tsX-Eh-vVY" id="6XG-t0-0YE"/>
+                            </connections>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwc-Pe-p3q">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Obs-sZ-6HR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButton:" destination="tsX-Eh-vVY" eventType="touchUpInside" id="gAU-yA-UjN"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保存消息到" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrx-BV-ckN">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="Yy3-dE-sHE"/>
+                                <constraint firstAttribute="width" constant="62" id="wpO-Wg-LBQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Cwc-Pe-p3q" firstAttribute="top" secondItem="XE4-aN-qvo" secondAttribute="bottom" id="C9W-6W-Lat"/>
+                        <constraint firstItem="yrx-BV-ckN" firstAttribute="centerX" secondItem="CDk-ld-Dj6" secondAttribute="centerX" id="Raf-6Y-q9s"/>
+                        <constraint firstAttribute="height" constant="205" id="Rba-1b-aZ9"/>
+                        <constraint firstAttribute="bottom" secondItem="Cwc-Pe-p3q" secondAttribute="bottom" id="Tfd-3h-xmv"/>
+                        <constraint firstAttribute="trailing" secondItem="XE4-aN-qvo" secondAttribute="trailing" id="Zrb-TN-jXD"/>
+                        <constraint firstItem="XE4-aN-qvo" firstAttribute="leading" secondItem="CDk-ld-Dj6" secondAttribute="leading" id="a0A-f2-36H"/>
+                        <constraint firstItem="yrx-BV-ckN" firstAttribute="top" secondItem="CDk-ld-Dj6" secondAttribute="top" constant="8" id="aj2-JL-rlc"/>
+                        <constraint firstAttribute="trailing" secondItem="Cwc-Pe-p3q" secondAttribute="trailing" id="hAh-2U-P5v"/>
+                        <constraint firstItem="Cwc-Pe-p3q" firstAttribute="leading" secondItem="CDk-ld-Dj6" secondAttribute="leading" id="oBk-0P-IhF"/>
+                        <constraint firstItem="XE4-aN-qvo" firstAttribute="top" secondItem="CDk-ld-Dj6" secondAttribute="top" id="pXR-EZ-wxo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CDk-ld-Dj6" secondAttribute="trailing" id="6V5-1p-r9i"/>
+                <constraint firstAttribute="bottom" secondItem="CDk-ld-Dj6" secondAttribute="bottom" id="NXb-QF-V8C"/>
+                <constraint firstItem="CDk-ld-Dj6" firstAttribute="leading" secondItem="tsX-Eh-vVY" secondAttribute="leading" id="if7-VA-2yg"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="XE4-aN-qvo" id="o43-6q-kXA"/>
+                <outlet property="contentView" destination="CDk-ld-Dj6" id="VQu-me-CL0"/>
+                <outlet property="contentViewBottomConstraint" destination="NXb-QF-V8C" id="0m7-XL-sS6"/>
+                <outlet property="flowLayout" destination="hfp-Nm-Bnf" id="uZJ-Lx-di3"/>
+            </connections>
+            <point key="canvasLocation" x="-55" y="39"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Session_Multi_Delete" width="35" height="35"/>
+        <image name="Session_Multi_Delete_HL" width="35" height="35"/>
+        <image name="Session_Multi_Fav" width="35" height="35"/>
+        <image name="Session_Multi_Fav_HL" width="35" height="35"/>
+        <image name="Session_Multi_Forward" width="35" height="35"/>
+        <image name="Session_Multi_Forward_HL" width="35" height="35"/>
+        <image name="Session_Multi_More" width="35" height="35"/>
+        <image name="Session_Multi_More_HL" width="35" height="35"/>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLChatAssetDisplayController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LLImageBottomBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ix-ea-Rkm">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="1hn-vq-VRy"/>
+                        <constraint firstAttribute="width" constant="39" id="AT8-PE-14l"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="player_mode_pic_wall"/>
+                    <connections>
+                        <action selector="moreButtonPressed:" destination="-1" eventType="touchUpInside" id="7mW-qO-KX9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-CG-6yS">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="106" id="akz-mG-HM6"/>
+                        <constraint firstAttribute="height" constant="28" id="x96-nB-ycl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="查看原图(3.3M)">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="imagedownload:" destination="-1" eventType="touchUpInside" id="ZT4-nm-DmR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Ix-ea-Rkm" secondAttribute="trailing" constant="14" id="hh1-VM-541"/>
+                <constraint firstItem="0LN-CG-6yS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s9J-JP-vsE"/>
+                <constraint firstAttribute="bottom" secondItem="8Ix-ea-Rkm" secondAttribute="bottom" constant="14" id="wgd-he-OEj"/>
+                <constraint firstItem="8Ix-ea-Rkm" firstAttribute="centerY" secondItem="0LN-CG-6yS" secondAttribute="centerY" id="x4b-Jg-Xyu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="downloadButton" destination="0LN-CG-6yS" id="ICx-mn-hCQ"/>
+                <outlet property="moreButton" destination="8Ix-ea-Rkm" id="fJF-3q-1Hn"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="player_mode_pic_wall" width="39" height="26"/>
+    </resources>
+</document>

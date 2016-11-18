@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="fsP-ca-vk3" customClass="LLConversationListCell">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fsP-ca-vk3" id="l0b-vx-zGa">
+                <frame key="frameInset" width="323" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-xd-lcm">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="VTo-xd-lcm" secondAttribute="height" multiplier="1:1" id="5sI-UV-sEa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腾讯新闻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIn-Np-9zd">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MessageListSending" translatesAutoresizingMaskIntoConstraints="NO" id="XAH-1O-4FC">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="YE2-38-WQR"/>
+                            <constraint firstAttribute="width" constant="19" id="pZf-Zc-oOW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="昨天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q97-m4-pZr">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[系统]账户保护功能已开启" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDc-cG-7qL">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="gjO-E2-AZF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-oo-1yg">
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="6rB-a9-dDK"/>
+                            <constraint firstAttribute="width" constant="18" id="f0c-o9-YlP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CDc-cG-7qL" firstAttribute="leading" secondItem="VTo-xd-lcm" secondAttribute="trailing" constant="31" id="1JN-Di-0F4"/>
+                    <constraint firstItem="UKm-oo-1yg" firstAttribute="trailing" secondItem="VTo-xd-lcm" secondAttribute="trailing" constant="6" id="Amd-O0-wRS"/>
+                    <constraint firstItem="q97-m4-pZr" firstAttribute="leading" secondItem="cIn-Np-9zd" secondAttribute="trailing" constant="8" id="Js7-9v-7bO"/>
+                    <constraint firstItem="XAH-1O-4FC" firstAttribute="leading" secondItem="VTo-xd-lcm" secondAttribute="trailing" constant="8" id="LoO-JL-3tj"/>
+                    <constraint firstItem="CDc-cG-7qL" firstAttribute="trailing" secondItem="l0b-vx-zGa" secondAttribute="trailingMargin" id="QSk-PL-37Y"/>
+                    <constraint firstItem="cIn-Np-9zd" firstAttribute="top" secondItem="l0b-vx-zGa" secondAttribute="topMargin" constant="3" id="QwD-RG-3ew"/>
+                    <constraint firstItem="VTo-xd-lcm" firstAttribute="bottom" secondItem="l0b-vx-zGa" secondAttribute="bottomMargin" id="S8o-g2-Wue"/>
+                    <constraint firstItem="UKm-oo-1yg" firstAttribute="top" secondItem="VTo-xd-lcm" secondAttribute="top" constant="-6" id="SMC-jT-DU2"/>
+                    <constraint firstItem="XAH-1O-4FC" firstAttribute="top" secondItem="cIn-Np-9zd" secondAttribute="bottom" constant="4" id="UYY-V1-Ade"/>
+                    <constraint firstItem="q97-m4-pZr" firstAttribute="baseline" secondItem="cIn-Np-9zd" secondAttribute="baseline" id="bqu-wp-mt1"/>
+                    <constraint firstItem="VTo-xd-lcm" firstAttribute="leading" secondItem="l0b-vx-zGa" secondAttribute="leadingMargin" id="jxD-Z2-hpI"/>
+                    <constraint firstItem="VTo-xd-lcm" firstAttribute="top" secondItem="l0b-vx-zGa" secondAttribute="topMargin" id="qf2-Yf-UE5"/>
+                    <constraint firstItem="q97-m4-pZr" firstAttribute="trailing" secondItem="l0b-vx-zGa" secondAttribute="trailingMargin" id="uBV-a8-Mx1"/>
+                    <constraint firstItem="CDc-cG-7qL" firstAttribute="top" secondItem="cIn-Np-9zd" secondAttribute="bottom" constant="6" id="vNC-Rf-cxR"/>
+                    <constraint firstItem="cIn-Np-9zd" firstAttribute="leading" secondItem="VTo-xd-lcm" secondAttribute="trailing" constant="10" id="wMn-hl-Jpt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="VTo-xd-lcm" id="sd9-Ci-Q1t"/>
+                <outlet property="badgeNumLabel" destination="UKm-oo-1yg" id="X4e-XN-YW8"/>
+                <outlet property="badgeNumWidthConstraint" destination="f0c-o9-YlP" id="Ukw-aA-NPg"/>
+                <outlet property="dateLabel" destination="q97-m4-pZr" id="aoN-dj-46M"/>
+                <outlet property="lastMessageLabel" destination="CDc-cG-7qL" id="t8R-Po-Q5o"/>
+                <outlet property="latestMessageLabelConstraint" destination="1JN-Di-0F4" id="RUQ-Eb-GOV"/>
+                <outlet property="messageStatusImageView" destination="XAH-1O-4FC" id="jkm-xg-QxD"/>
+                <outlet property="titleLabel" destination="cIn-Np-9zd" id="YtM-ap-XHl"/>
+            </connections>
+            <point key="canvasLocation" x="-46.5" y="194"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MessageListSending" width="19" height="19"/>
+        <image name="user.png" width="50" height="50"/>
+    </resources>
+</document>

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  LLWeChat
+
+  Created by GYJZH on 7/17/16.
+  Copyright © 2016 GYJZH. All rights reserved.
+*/
+
+//Tabbar
+"tabbar.chats" = "微信";
+"tabbar.contacts" = "通讯录";
+"tabbar.discover" = "发现";
+"tabbar.me" = "我";
+

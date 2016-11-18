@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  LLWeChat
+
+  Created by GYJZH on 7/17/16.
+  Copyright © 2016 GYJZH. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "LL微信";
+"NSLocationWhenInUseUsageDescription" = "请点击“允许”以允许访问。\n若不允许，你将无法发送地理位置。";
