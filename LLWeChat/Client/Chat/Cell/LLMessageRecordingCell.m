@@ -9,6 +9,7 @@
 #import "LLMessageRecordingCell.h"
 #import "UIKit+LLExt.h"
 #import "LLMessageVoiceCell.h"
+#import "LLColors.h"
 
 #define RECORD_ANIMATION_KEY @"RecordAnimate"
 
@@ -17,6 +18,8 @@
 @interface LLMessageRecordingCell ()
 
 @property (nonatomic) UIImageView *downloadingImageView;
+
+@property (nonatomic) UILabel *durationLabel;
 
 @property (nonatomic) CAKeyframeAnimation *keyFrameAnimation;
 
@@ -44,6 +47,12 @@
         
         [self.contentView insertSubview:self.downloadingImageView belowSubview:self.bubbleImage];
         
+        _durationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, OFFSET_Y, 60, AVATAR_HEIGHT)];
+        _durationLabel.textColor = kLLTextColor_lightGray_7;
+        _durationLabel.font = [UIFont systemFontOfSize:16];
+        _durationLabel.textAlignment = NSTextAlignmentRight;
+        [self.contentView addSubview:_durationLabel];
+        
     }
     
     return self;
@@ -67,6 +76,10 @@
         
         self.downloadingImageView.frame = self.bubbleImage.frame;
         [self.bubbleImage.layer addAnimation:self.keyFrameAnimation forKey:RECORD_ANIMATION_KEY];
+         
+         frame = self.durationLabel.frame;
+         frame.origin.x = CGRectGetMinX(self.bubbleImage.frame) - CGRectGetWidth(frame) - 8 + BUBBLE_LEFT_BLANK;
+         self.durationLabel.frame = frame;
     }
 }
 
@@ -108,6 +121,10 @@
     [messageModel clearNeedsUpdateForReuse];
 }
 
+
+- (void)updateDurationLabel:(int)duration {
+    _durationLabel.text = [NSString stringWithFormat:@"%d'", duration];
+}
 
 + (CGFloat)heightForModel:(LLMessageModel *)model {
     return AVATAR_HEIGHT + CONTENT_SUPER_BOTTOM + OFFSET_Y;

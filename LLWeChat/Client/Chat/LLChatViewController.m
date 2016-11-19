@@ -1861,6 +1861,10 @@ MFMailComposeViewControllerDelegate
     }
 }
 
+- (void)audioRecordDurationDidChanged:(NSTimeInterval)duration {
+    [[LLMessageRecordingCell sharedRecordingCell] updateDurationLabel:round(duration)];
+}
+
 - (LLMessageModel *)getRecordingModel {
     for (NSInteger i = self.dataSource.count - 1; i >= 0; i--) {
         if (self.dataSource[i].messageBodyType == kLLMessageBodyTypeRecording) {
