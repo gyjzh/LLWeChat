@@ -459,7 +459,9 @@ static long long  MAX_ACCEPT_BITMAP_SIZE = 52428800;
         
         [_imageManager requestImageForAsset:assetModel.asset_PH targetSize:pixSize contentMode:PHImageContentModeAspectFill options:_requestOptions resultHandler:^(UIImage *image, NSDictionary *info) {
             assetModel.isAssetInLocalAlbum = (image != nil);
-            asyncCallback(image, assetModel);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                asyncCallback(image, assetModel);
+            });
         }];
         
     }
