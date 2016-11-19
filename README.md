@@ -216,10 +216,6 @@ ImagePicker做了PhotoKit和AssetLibrary适配
 3、消息搜索、上拉刷新<br/>
 4、群聊<br/>
 5、通讯录<br/>
-***
-6、国际化，iPhone、iPad全版本适配，操作声效 、IOS版本适配（可能不做）<br/>
-7、日志、奔溃、统计等 （可能不做）
-
 
 
 ##Licenses
