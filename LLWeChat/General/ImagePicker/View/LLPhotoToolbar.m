@@ -9,6 +9,7 @@
 #import "LLPhotoToolbar.h"
 #import "LLImageNumberView.h"
 #import "LLImagePickerConfig.h"
+#import "LLUtils.h"
 
 @interface LLPhotoToolbar ()
 
@@ -38,7 +39,12 @@
     }else {
 //        self.toolBar.barStyle = UIBarStyleBlack;
         self.toolBar.barTintColor = [UIColor colorWithRed:19/255.0 green:19/255.0 blue:20/255.0 alpha:1];
-        self.toolBar.subviews[0].alpha = 0.6;
+        if ([LLUtils systemVersion] < 10.0) {
+            self.toolBar.subviews[0].alpha = 0.6;
+        }else {
+            //IOS10 UIToolBar显示列表结构发生改变
+            self.toolBar.alpha = 0.6;
+        }
     }
     
     

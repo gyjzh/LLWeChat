@@ -173,11 +173,11 @@ MFMailComposeViewControllerDelegate
     
     [LLChatManager sharedManager].messageListDelegate = self;
     navigationBarTranslucent = self.navigationController.navigationBar.translucent;
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = NO;
     
     UIView *blackView = [self.view viewWithTag:BLACK_BAR_VIEW_TAG];
     if (self.navigationController.navigationBar.subviews[0].alpha == 0 && !blackView) {
-        blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
+        blackView = [[UIView alloc] initWithFrame:CGRectMake(0, -64, SCREEN_WIDTH, 64)];
         blackView.backgroundColor = [UIColor blackColor];
         [self.view addSubview:blackView];
     }

@@ -44,8 +44,28 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Allow WeChat Use Bluetooth Peripheral.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Use your Camera to record video, using VoIP features.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Allow WeChat Use your Contact.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow WeChat Use Health Share.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow WeChat Use Health Update.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow WeChat Use your Location always.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>OK</string>
+	<string>Allow WeChat Use your Location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow WeChat Use your Location when in use.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Use your Microphone to record voice messages, using VoIP features.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Allow WeChat Use Motion.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow WeChat Use your PhotoLibrary.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

@@ -7,4 +7,24 @@
 */
 
 "CFBundleDisplayName" = "LL微信";
-"NSLocationWhenInUseUsageDescription" = "请点击“允许”以允许访问。\n若不允许，你将无法发送地理位置。";
+
+"NSCalendarsUsageDescription" = "If not allowed, WeChat will be unable to access your phone calendar and add schedule messages to your calendar.";
+
+"NSSiriUsageDescription" = "If not allowed, you will be unable to send WeChat messages or make voice/video calls via Siri.";
+
+"NSMicrophoneUsageDescription" = "如果不允许，你将无法使用微信发送语音消息、拨打语音/视频电话。";
+
+"NSPhotoLibraryUsageDescription" = "如果不允许，你将无法发送照片给你的微信好友。";
+
+"NSCameraUsageDescription" = "如果不允许，你将无法使用微信拍照、拍摄小视频、视频通话和扫描二维码。";
+
+"NSBluetoothPeripheralUsageDescription" = "If not allowed, WeChat will be unable to access your Bluetooth devices.";
+
+"NSLocationUsageDescription" = "如果不允许，你将无法在聊天中分享你的位置，也无法使用摇一摇、附近的人等功能。";
+
+"NSContactsUsageDescription" = "If not allowed, WeChat cannot help you find mobile contacts who also use WeChat. Your mobile contacts data will be safely encrypted before being matched.";
+
+"NSLocationAlwaysUsageDescription" = "如果不允许，你将无法在Apple Watch中使用一些微信功能。";
+
+"NSLocationWhenInUseUsageDescription" = "如果不允许，你将无法在聊天中分享你的位置，也无法使用摇一摇、附近的人等功能。";
+
