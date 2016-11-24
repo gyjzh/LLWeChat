@@ -7,4 +7,24 @@
 */
 
 "CFBundleDisplayName" = "LLWeChat";
-"NSLocationWhenInUseUsageDescription" = "请点击“允许”以允许访问。\n若不允许，你将无法发送地理位置。";
+
+"NSCalendarsUsageDescription" = "If not allowed, WeChat will be unable to access your phone calendar and add schedule messages to your calendar.";
+
+"NSSiriUsageDescription" = "If not allowed, you will be unable to send WeChat messages or make voice/video calls via Siri.";
+
+"NSMicrophoneUsageDescription" = "If not allowed, you will be unable to send audio messages or make a voice/video calls within WeChat.";
+
+"NSPhotoLibraryUsageDescription" = "If not allowed, you will be unable to send photos from Camera Roll to friends on WeChat.";
+
+"NSCameraUsageDescription" = "If not allowed, you will be unable to take photos and Sight, use video calls, or scan QR codes.";
+
+
+"NSBluetoothPeripheralUsageDescription" = "If not allowed, WeChat will be unable to access your Bluetooth devices.";
+
+"NSLocationUsageDescription" = "If not allowed, you will be unable to share your location within chats or use location-based services like Shake and People Nearby";
+
+"NSContactsUsageDescription" = "If not allowed, WeChat cannot help you find mobile contacts who also use WeChat. Your mobile contacts data will be safely encrypted before being matched.";
+
+"NSLocationAlwaysUsageDescription" = "If not allowed, you will be unable to use some WeChat features via Apple Watch.";
+
+"NSLocationWhenInUseUsageDescription" = "If not allowed, you will be unable to share your location within chats or use location-based services like Shake and People Nearby.";

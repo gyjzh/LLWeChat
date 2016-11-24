@@ -48,6 +48,7 @@ static LLAudioManager *instance;
 @implementation LLAudioManager {
     CFTimeInterval startTime;
     NSTimeInterval maxRecordTime;
+    NSTimer *timer;
     
     NSDate *startDate;
 //    NSDate *endDate;
@@ -234,6 +235,13 @@ static LLAudioManager *instance;
             self.isCancelRecording = NO;
             self.isRecording = YES;
             self.recorder.delegate = self;
+            
+            [timer invalidate];
+            SAFE_SEND_MESSAGE(self.recordDelegate, audioRecordDurationDidChanged:) {
+                timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerHandler:) userInfo:nil repeats:YES];
+                [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+            }
+            
             //开启仪表计数功能,可以获取当前录音音量大小
             self.recorder.meteringEnabled = YES;
             maxRecordTime = MAX_RECORD_TIME_ALLOWED;
@@ -323,7 +331,9 @@ static LLAudioManager *instance;
     });
 }
 
-
+- (void)timerHandler:(NSTimer *)timer {
+    [self.recordDelegate audioRecordDurationDidChanged:self.recorder.currentTime];
+}
 
 /**
  *  停止录音

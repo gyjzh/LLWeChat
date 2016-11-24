@@ -19,8 +19,6 @@
 #import "LLAudioManager.h"
 #import "LLMessageThumbnailManager.h"
 
-#define EaseMobAppKey @"easemob-demo#chatdemoui"
-
 @interface AppDelegate ()
 
 @end
@@ -102,8 +100,9 @@
 
 - (void)initializeSDK {
     
-//#warning 初始化环信SDK，详细内容在AppDelegate+EaseMob.m 文件中
+//#warning 初始化环信SDK
 //#warning SDK注册 APNS文件的名字, 需要与后台上传证书时的名字一一对应
+//#warning 本项目没有使用离线推送功能
     NSString *apnsCertName = nil;
 #if DEBUG
     apnsCertName = @"chatdemoui_dev";
@@ -114,11 +113,10 @@
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *appkey = [ud stringForKey:@"identifier_appkey"];
     if (!appkey) {
-        appkey = EaseMobAppKey;
+        appkey = EASE_MOB_APP_KEY;
         [ud setObject:appkey forKey:@"identifier_appkey"];
     }
-    
-    
+
     //初始化EMClient
     EMOptions *options = [EMOptions optionsWithAppkey:appkey];
     options.apnsCertName = apnsCertName;

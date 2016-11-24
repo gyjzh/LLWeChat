@@ -12,4 +12,6 @@
 
 + (instancetype)sharedRecordingCell;
 
+- (void)updateDurationLabel:(int)duration;
+
 @end

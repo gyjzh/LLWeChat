@@ -48,7 +48,6 @@
     }
     
     _isImageExist = YES;
-    [self hideLoadingIndicator];
     
     _imageSize = CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH/image.size.width * image.size.height);
     CGFloat _y = (SCREEN_HEIGHT > _imageSize.height) ? (SCREEN_HEIGHT - _imageSize.height)/2 : 0;

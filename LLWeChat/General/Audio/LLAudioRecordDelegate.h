@@ -25,6 +25,9 @@
  */
 - (void)audioRecordDidUpdateVoiceMeter:(double)averagePower;
 
+//录音时长变化，以秒为单位
+- (void)audioRecordDurationDidChanged:(NSTimeInterval)duration;
+
 //录音最长时间，默认为MAX_RECORD_TIME_ALLOWED = 60秒
 - (NSTimeInterval)audioRecordMaxRecordTime;
 

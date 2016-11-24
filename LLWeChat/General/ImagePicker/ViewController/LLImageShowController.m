@@ -156,7 +156,7 @@
 - (void)fillScrollView:(LLImageScrollView *)scrollView withAssetIndex:(NSInteger)assetIndex {
     scrollView.assetIndex = assetIndex;
     scrollView.assetModel = _allAssets[assetIndex];
-    
+
     LLFetchImageSyncCallbackBlock syncCallback = ^(UIImage *_Nullable image, BOOL needBackgroundLoading) {
         [scrollView setContentWithImage:image];
     };
@@ -166,6 +166,9 @@
         for (LLImageScrollView *scrollView in weakSelf.innerScrollViews) {
             if (scrollView.assetModel == assetModel) {
                 [scrollView setContentWithImage:image];
+                if (assetModel == weakSelf.curShowAsset) {
+                    [weakSelf setImageSelectStatus];
+                }
                 break;
             }
         }
@@ -176,6 +179,8 @@
     }else {
         [scrollView setContentWithImage:nil];
     }
+    
+    [scrollView setContentWithImage:[UIImage imageNamed:@"ff_IconShake"]];
     
     scrollView.frame = CGRectMake(scroll_width * assetIndex, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 }
@@ -201,10 +206,20 @@
 
 }
 
+- (void)setImageSelectStatus {
+    if (_curShowScrollView.isImageExist) {
+        self.bigSelectView.hidden = NO;
+        self.bigSelectView.selected = [self.allSelectdAssets containsObject:self.curShowAsset];
+    }else {
+        self.bigSelectView.hidden = YES;
+    }
+}
 
 #pragma mark - 处理左右拖动
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"scrollWillBeginDragging");
+    
     if (scrollView != self.scrollView) {
         for (LLImageScrollView *scrollView in self.innerScrollViews) {
             scrollView.hidden = YES;
@@ -245,12 +260,7 @@
             //判断当前显示照片是否已被选择
             NSInteger assetIndex = innerScrollView.assetIndex;
             self.curShowAsset = self.allAssets[assetIndex];
-            if (_curShowScrollView.isImageExist) {
-                self.bigSelectView.hidden = NO;
-                self.bigSelectView.selected = [self.allSelectdAssets containsObject:self.curShowAsset];
-            }else {
-                self.bigSelectView.hidden = YES;
-            }
+            [self setImageSelectStatus];
             
             //移动前后照片
             if (assetIndex + 1 < _allAssets.count && [self scrollViewWithAssetIndex:assetIndex + 1] == nil) {
@@ -312,6 +322,8 @@
 #pragma mark - 其他
 
 - (void)handleTapGesture:(UITapGestureRecognizer *)tap {
+    NSLog(@"TapTp");
+    
     self.toolbar.hidden = !self.toolbar.isHidden;
     self.navigationController.navigationBar.hidden = !self.navigationController.navigationBar.isHidden;
 }
