@@ -6,6 +6,10 @@
 #import <Foundation/Foundation.h>
 #import "LLColors.h"
 
+#pragma mark - 环信SDK配置 -
+
+#define EASE_MOB_APP_KEY @"1172161124178919#llwechat"
+
 #pragma mark - ID配置 -
 
 //Storyboard中ViewControllerID
