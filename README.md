@@ -1,5 +1,4 @@
 # LLWeChat 1.0
-**说明：下载项目请下载stable分支，不要下载master分支** <br/>
 **本README包含18张效果图，约36M大小，载入时间较长，请耐心等待**
 
 ##写在前面
@@ -228,6 +227,11 @@ ImagePicker做了PhotoKit和AssetLibrary适配
 3、消息搜索、上拉刷新<br/>
 4、群聊<br/>
 5、通讯录<br/>
+
+##更新日志：2016-11-24
+1、删除stable分支，只保留master、develop两个分支，越简单越好
+2、适配IOS10，原项目在IOS10运行会直接奔溃。
+3、消息离线推送暂不支持
 
 
 ##Licenses
